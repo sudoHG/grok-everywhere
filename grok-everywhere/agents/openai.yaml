@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grok Everywhere"
+  short_description: "Route Grok text, search, speech, image, and video tasks"
+  default_prompt: "Use $grok-everywhere to route this request to the smallest appropriate Grok text, search, speech, image, or video command."

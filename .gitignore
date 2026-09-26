@@ -1,0 +1,10 @@
+AGENTS.md
+项目进度.md
+私有记录/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+outputs/
+tmp/
+发布包/
