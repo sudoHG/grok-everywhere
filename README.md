@@ -7,11 +7,14 @@ English | [简体中文](README.zh-CN.md)
 > One Grok subscription, multiple API-like capabilities.
 > Plug X search, image generation, video generation, voiceovers, and transcription directly into your primary agents—Claude Code, Codex, Cursor—and your everyday workflows.
 
+<p align="center"><img src="docs/demo.gif" width="720" alt="A fresh Claude Code session asks Grok for a video of itself as Claude's intern, fetching coffee. Grok renders it."></p>
+<p align="center"><sub>One sentence in Claude Code. Grok made the video. Real run, 2026-09-27.</sub></p>
+
 ---
 
 ## Why I Built This
 
-I bought an annual SuperGrok Heavy subscription right when Grok 4.5 came out. But by the time Grok 4.7 rolled around, I found myself increasingly reluctant to hand it coding tasks: it was slow, and the reasoning just wasn't reliable enough. I'd switched to another coding tool, but my annual subscription was still active. Was I really just going to let the rest of that subscription sit idle?
+I subscribed to SuperGrok Heavy right when Grok 4.5 came out. By the time Grok 4.7 rolled around, I'd stopped handing it coding tasks: it was slow, and the reasoning just wasn't reliable enough. So I canceled. But plenty of people prepaid for a whole year, and a canceled plan usually keeps running until the billing period ends. Is all of that just going to sit idle?
 
 Even if I don't want to use it for coding anymore, image generation, video generation, voice synthesis, transcription, and X search are all things I still have a use for. If I could hook them directly into my current primary tools, the remaining subscription would actually be useful.
 
@@ -215,7 +218,7 @@ python3 grok-everywhere/scripts/grok.py --auth session video resume REQUEST_ID -
 
 - **Scope of Capabilities**: This project focuses on REST workflows. It currently does not include WebSocket real-time voice conversations (Realtime Voice), streaming STT/TTS, custom voice clone creation, telephony/SIP integration, or automatic session token refresh.
 - **Session Access**: Reading a local session is a convenience compatibility layer; it does not constitute an official API commitment, nor does it guarantee unlimited quota or support across every account tier. X search capabilities are strictly focused on search and analysis—not posting tweets or managing accounts.
-- **Tested Scope**: Version 0.2.0 has been verified under macOS / Codex via the session route across 25 representative workflow calls and 40 offline tests. A successful API call does not mean generated content passes all quality bars—search, transcription, and media generation results still require review. Claude Code, Cursor, Windows/Linux, and standalone API key routes have not undergone the same round of end-to-end testing.
+- **Tested Scope**: Version 0.2.0 has been verified under macOS / Codex via the session route across 25 representative workflow calls and 40 offline tests. On 2026-09-27, a fresh headless Claude Code session on macOS also completed one `video generate` call (6 s, 1080p) end-to-end via the session route; the demo at the top is that run. A successful API call does not mean generated content passes all quality bars—search, transcription, and media generation results still require review. Beyond that one call, Claude Code, Cursor, Windows/Linux, and standalone API key routes have not undergone the same round of end-to-end testing.
 - **Quotas & Billing**: This testing confirmed that these calls work, but did not audit account billing statements. Do not assume your subscription covers all usage; endpoints that do not return pricing metadata are not guaranteed to be free.
 
 ---
@@ -223,4 +226,4 @@ python3 grok-everywhere/scripts/grok.py --auth session video resume REQUEST_ID -
 ## License & Disclaimer
 
 This project is licensed under the [MIT License](LICENSE).
-This is an independent open-source community project and is not officially affiliated with or endorsed by xAI or Grok.
+This is an independent open-source community project and is not officially affiliated with or endorsed by xAI, Grok, or Anthropic.

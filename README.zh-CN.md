@@ -7,11 +7,14 @@
 > 一个 Grok 订阅，多种像 API 一样可调用的能力。
 > 把 X 搜索、生图、生视频、配音、转录等能力，直接接入你的 Claude Code、Codex、Cursor 主力 Agent 与日常工作流。
 
+<p align="center"><img src="docs/demo.gif" width="720" alt="全新的 Claude Code 会话让 Grok 生成一段自己给 Claude 当实习生、端咖啡的视频，Grok 生成了它。"></p>
+<p align="center"><sub>在 Claude Code 里说一句话，Grok 生成了这段视频。2026-09-27 真实运行。</sub></p>
+
 ---
 
 ## 为什么做这个项目？
 
-我是在 Grok 4.5刚出来的时候买下SuperGrok Heavy订阅的。但到了 Grok 4.7，我越来越不愿意把编程任务交给它：速度慢，推理也不够可靠。主力工具换了，年费却还没到期。难道剩下的订阅就这么闲着？
+我是在 Grok 4.5 刚出来的时候开通 SuperGrok Heavy 的。但到了 Grok 4.7，我越来越不愿意把编程任务交给它：速度慢，推理也不够可靠，于是取消了订阅。可不少人是直接买的年费；就算取消，订阅通常也要到本期结束才失效。难道剩下的这段订阅就这么闲着？
 
 编程任务不想再交给它，但生图、生视频、配音、转录和 X 搜索这些能力，我还是用得上的。如果能把它们接到现在的主力工具里，剩下的订阅就还有用。
 
@@ -215,7 +218,7 @@ python3 grok-everywhere/scripts/grok.py --auth session video resume REQUEST_ID -
 
 - **能力范围**：本项目专注于 REST 工作流，当前不包含 WebSocket 实时语音对讲（Realtime Voice）、流式 STT/TTS、自定义音色克隆创建、电话/SIP 接入以及会话 Token 自动刷新。
 - **调用性质**：读取本地会话是便捷的兼容调用方式，不代表官方 API 承诺，也不等同于无限量额度或全平台账号保证；X 搜索能力聚焦于检索与分析，不包含发推或账号管理操作。
-- **实测范围**：当前 0.2.0 版本在 macOS / Codex 环境下，通过 session 路线完成了 25 项代表性流程调用及 40 项离线测试。调用成功不等于内容质量全部通过，搜索、转录和媒体生成结果仍需检查。Claude Code、Cursor、Windows/Linux 和独立 API Key 路线尚未完成同轮实测。
+- **实测范围**：当前 0.2.0 版本在 macOS / Codex 环境下，通过 session 路线完成了 25 项代表性流程调用及 40 项离线测试。2026-09-27 又在 macOS 上用全新的无头 Claude Code 会话，通过 session 路线完整跑通了一次 `video generate`（6 秒、1080p），页首演示就是这次运行。调用成功不等于内容质量全部通过，搜索、转录和媒体生成结果仍需检查。除这一次调用外，Claude Code、Cursor、Windows/Linux 和独立 API Key 路线尚未完成同轮实测。
 - **额度与费用**：本轮确认的是这套调用方式可用，没有核对账号账单，不能据此保证订阅覆盖全部消耗；接口没有返回费用也不代表免费。
 
 ---
@@ -223,4 +226,4 @@ python3 grok-everywhere/scripts/grok.py --auth session video resume REQUEST_ID -
 ## 开源协议与免责声明
 
 本项目采用 [MIT License](LICENSE) 开源。
-本项目为独立的开源社区项目，与 xAI / Grok 无官方隶属或商业背书关系。
+本项目为独立的开源社区项目，与 xAI / Grok 及 Anthropic 均无官方隶属或商业背书关系。
